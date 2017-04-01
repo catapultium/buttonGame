@@ -20,6 +20,7 @@ jar {
 }
 
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
 	mavenCentral()
@@ -34,6 +35,14 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.boot:spring-boot-starter-websocket')
 	runtime('org.springframework.boot:spring-boot-devtools')
+	
+	compile("org.webjars:webjars-locator")
+	compile("org.webjars:sockjs-client:1.0.2")
+	compile("org.webjars:stomp-websocket:2.3.3")
+	compile("org.webjars:bootstrap:3.3.7")
+	compile("org.webjars:jquery:3.1.0")
+	
+	
 	runtime('com.h2database:h2')
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')

@@ -1,21 +1,12 @@
 package unknown;
 
 import lombok.Data;
-import org.springframework.messaging.handler.annotation.MessageMapping;
-import org.springframework.messaging.handler.annotation.SendTo;
+
+import java.util.Date;
 
 @Data
 public class HelloMessage {
-    @MessageMapping("hello")
-    @SendTo("/chat/hello")
-    public HelloMessage hello(HelloMessage message) throws Exception {
-        
-        Thread.sleep(100);
-        return message;
-    }
-    
-    public HelloMessage bye (HelloMessage message) throws Exception {
-        return null;
-    }
-    
+    private String name;
+    private String contents;
+    private Date date;
 }
